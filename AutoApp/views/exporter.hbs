@@ -1,0 +1,177 @@
+<head>
+<div class="px-3 py-2 " style="background-color: rgba(148, 187, 151, 0.5);>
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        {{!-- <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
+        <svg class="bi d-block mx-coffee mb-1 " width="24" height="24"></svg>
+        {{title}}          
+        </h2>      --}}
+    <a type="button" class="btn btn-success filled marginLeft " href="/" class="nav-link text-white">
+   Back
+    </a>        
+    </div>
+    </div>
+</div> 
+</head>
+</br>
+<div class="jumbotron jumbotronManufacturer jumbotron-fluid" background-image: url('/home/prabhat.rawat@npci.org.in/Downloads
+latte-coffee-cup.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+  background-size: cover; /* This will make the image cover the entire div */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: center center;>
+  <div class="container">
+    <h1 class="display-4">Exporter</h1>
+    </div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+
+        <div class="col-md-6 col-sm-12">
+
+            <div class="coffeed coffeed-shadow">
+                <div class="coffeed-header">
+                    <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryAdd" role="button" aria-expanded="false" aria-controls="collapseExample">Add a new Coffee</legend>
+                </div>
+                <div class="form-modal" >
+                <div class="coffeed-body collapse" id="collapseQueryAdd" >
+                    <form id="manForm">
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Vin Number</a>
+                            <label for="vinNumber" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="vinNumber" aria-describedby="vinNumber" placeholder="001">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Coffee Make</a>
+                            <label for="coffeeMake" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="coffeeMake" aria-describedby="coffeeMake" placeholder="Tata">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Coffee model</a>
+                            <label for="coffeeModel" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="coffeeModel" aria-describedby="coffeeModel" placeholder="Tiago">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Coffee Colour</a>
+                            <label for="coffeeColour" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="coffeeColour" aria-describedby="coffeeColour" placeholder="Black">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Date of manufacture</a>
+                            <label for="dom" class="form-label mt-4"></label>
+                            <input type="date" class="form-control" onfocus="(this.type='date')" id="dom" aria-describedby="dom" placeholder="22/06/2021">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Exporter Name</a>
+                            <label for="manName" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="manName" aria-describedby="manName" placeholder="Tata coffeemobiles">
+                            </div>
+                        </div>      
+                        </br>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" >
+                                <button type="button" onclick="ManWriteData(event)" class="btn btn-secondary rounded-pill">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"> 
+        </div>
+
+    </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12">
+            <div class="coffeed coffeed-shadow">
+                <div class="coffeed-header" >
+                    <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryRead" role="button" aria-expanded="false" aria-controls="collapseExample">Get Details of a Specific Coffee</legend>
+                </div>
+                <div class="coffeed-body collapse"  id="collapseQueryRead">
+                    <form>
+                        <div class="row .navbar-brand" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Vin Number</a>
+                            <label for="QueryVinNumbMan" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="QueryVinNumbMan" aria-describedby="QueryVinNumbMan" placeholder="001">
+                            </div>
+                        </div>
+                        </br>
+                        <button type="submit" onclick="ManQueryData(event)" class="btn btn-fill btn-secondary rounded-pill">Submit</button></br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"></div>
+    </div>
+</div>
+</br>
+
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12">
+            <div class="coffeed">
+                <div class="coffeed-header" >
+                    <legend class="text-center" >Coffees in Factory</legend>
+                </div>
+                <div class="coffeed-body">
+                   <div class="table-container">
+      <table class="table" style="width:100%">
+          <thead id="colored-table">
+              <th>CoffeeId</th>
+              <th>Color</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>Owner</th>
+              <th>Status</th>
+              <th> </th>
+          </thead>
+          <tbody>
+              {{#each itemList}}
+              {{#ifequals this.Record.status "In Factory"}}
+              <tr>
+                  <td>{{this.Key}}</td>
+                  <td>{{this.Record.color}}</td>
+                  <td>{{this.Record.make}}</td>
+                  <td>{{this.Record.model}}</td>
+                  <td>{{this.Record.ownedBy}}</td>
+                  <td>{{this.Record.status}}</td>
+                  <td><button class="btn btn-success filled" onClick="getMatchingOrders('{{this.Key}}');">Get Matching Orders</button></td>
+
+              </tr>
+              {{/ifequals}}
+              {{/each}}
+          </tbody>
+      </table>
+  </div> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"></div>
+
+    </div>
+</div>
+</br>
+    </div>
+
+
+<script type="text/javascript" src='/javascripts/main.js'></script>
+

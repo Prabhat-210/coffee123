@@ -1,0 +1,32 @@
+fabric:
+############################################################### 
+  # Declaring unique addresses of the Certificate Authorities 
+  # of all organizations.
+  cas:  
+  - "ca1.processor.coffee.com" #mvd
+  - "ca1.exporter.coffee.com"   #manu
+  - "ca1.importer.coffee.com"  #dealer
+############################################################### 
+  # Declaring unique addresses of the peers of organisations. 
+  # There can be multiple peers for each organizations
+  peers: 
+  - "peer1.processor.coffee.com"
+  # - "peer2.processor.coffee.com"
+  - "peer1.exporter.coffee.com"
+  # - "peer2.exporter.coffee.com"
+  - "peer1.importer.coffee.com"
+  # - "peer2.importer.coffee.com"
+############################################################### 
+  # Declaring unique addresses of the orderers.
+  orderers:
+  - "orderer1.coffee.com"
+  - "orderer2.coffee.com"
+  - "orderer3.coffee.com"
+############################################################### 
+  settings:
+    ca:
+      FABRIC_LOGGING_SPEC: DEBUG
+    peer:
+      FABRIC_LOGGING_SPEC: DEBUG
+    orderer:
+      FABRIC_LOGGING_SPEC: DEBUG

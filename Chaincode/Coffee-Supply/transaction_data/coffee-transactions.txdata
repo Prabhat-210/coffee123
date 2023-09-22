@@ -1,0 +1,71 @@
+[
+  {
+    "transactionName": "coffeeExists",
+    "transactionLabel": "A test coffeeExists transaction",
+    "arguments": [
+      "Coffee-001"
+    ],
+    "transientData": {}
+  },
+  {
+    "transactionName": "createCoffee",
+    "transactionLabel": "A test createCoffee transaction",
+    "arguments": [
+      "Coffee-003",
+      "Sedan",
+      "X1",
+      "Red",
+      "10-10-2020",
+      "Factory-01"
+    ],
+    "transientData": {}
+  },
+  {
+    "transactionName": "readCoffee",
+    "transactionLabel": "A test readCoffee transaction",
+    "arguments": [
+      "Coffee-001"
+    ],
+    "transientData": {}
+  },
+  {
+    "transactionName": "deleteCoffee",
+    "transactionLabel": "A test deleteCoffee transaction",
+    "arguments": [
+      "Coffee-001"
+    ],
+    "transientData": {}
+  },
+  {
+    "transactionName": "queryAllCoffees",
+    "transactionLabel": "A test queryAllCoffees transaction",
+    "arguments": [],
+    "transientData": {}
+  },
+  {
+    "transactionName": "getCoffeesByRange",
+    "transactionLabel": "A test getCoffeesByRange transaction",
+    "arguments": [
+      "",
+      ""
+    ],
+    "transientData": {}
+  },
+  {
+    "transactionName": "getCoffeesWithPagination",
+    "transactionLabel": "A test getCoffeesWithPagination transaction",
+    "arguments": [
+      "2",
+      ""
+    ],
+    "transientData": {}
+  },
+  {
+    "transactionName": "getCoffeesHistory",
+    "transactionLabel": "A test getCoffeesHistory transaction",
+    "arguments": [
+      "Coffee-001"
+    ],
+    "transientData": {}
+  }
+]

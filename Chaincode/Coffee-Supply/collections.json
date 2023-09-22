@@ -1,0 +1,10 @@
+[
+  {
+    "name": "CollectionOrder",
+    "policy": "OR('exporter-coffee-com.member', 'importer-coffee-com.member')",
+    "requiredPeerCount": 1,
+    "maxPeerCount": 1,
+    "blockToLive": 1000000,
+    "memberOnlyRead": true
+  }
+]
