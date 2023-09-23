@@ -1,145 +1,66 @@
 
 {{!-- Navigation  --}}
-<div class="px-3 py-2" style="background-image: url('AutoApp/views/pexels-andrew-neel-4264047.jpg'); background-size: cover;">
-  <div class="container">
-<head>
-<div class="px-3 py-2 " style="background-color: rgba(148, 187, 151, 0.5);>
-  <div class="container">
+
+
+
+{{!-- List of all assets --}}
+<body>
+        <div class="form-modal">
+            <div class="jumbotron jumbotronIndex">
+              <div class="container" style="background-color: rgba(194, 189, 115, 0.404);">
     {{!-- <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> --}}
       {{!-- <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
       <svg class="bi d-block mx-coffee mb-1 " width="24" height="24"></svg> --}}
-      <h2><center>
+      <h2 style=" color: White; "><center>
       {{title}}          
       </center>
       </h2>
        
     </div>
-  </div>
-</div>
-</head>
-
-
-{{!-- List of all assets --}}
-<body>
-      <br><br><br><br><br><br>
-        <div class="form-modal">
-            <div class="container-fluid">
-                <div class="row rowBox" >
+                <div class="row rowBox1" >
                 <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                    <a href="/exporter" class="thumbnail center">
-                        <img src="images/exporter.png" width="100" height="100" alt="...">
-                    <h5 class="text-center">Exporter</h5>
-                    </a>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                    <a href="/importer" class="thumbnail center">
-                        <img src="images/importer.png" width="100" height="100" alt="...">
-                     <h5 class="text-center">Importer</h5>
-                    </a>
-                   
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                    <a href="/processor" class="thumbnail center">
-                        <img src="images/processor.png" width="100" height="100" alt="...">
-                    <h5 class="text-center">Processor</h5>
-                    </a>
                     
-                    </div>                
+                      <div class="col-xs-12 col-md-3">
+    <a href="/exporter" class="thumbnail center" style="background-color: rgba(143, 130, 130, 0.479); padding-left: 0px;">
+        <img src="images/exporter.png" width="100" height="100" alt="...">
+        <h3 class="text-center" style="color: White;">Exporter</h3>
+    </a>
+</div>  
+ <div class="col-xs-12 col-md-3">
+    <a href="/register" class="thumbnail center" style="background-color: rgba(143, 130, 130, 0.479); padding-left: 0px;">
+        <img src="images/authorize.png" width="100" height="100" alt="...">
+        <h3 class="text-center" style="color: White;">Register Entity</h3>
+    </a>
+</div> 
+  <div class="col-xs-12 col-md-3">
+    <a href="/importer" class="thumbnail center" style="background-color: rgba(143, 130, 130, 0.479); padding-left: 0px;">
+        <img src="images/importer.png" width="100" height="100" alt="...">
+        <h3 class="text-center" style="color: White;">Importer</h3>
+    </a>
+</div>  
+                   <div class="col-xs-12 col-md-3">
+    <a href="/processor" class="thumbnail center" style="background-color: rgba(143, 130, 130, 0.479); padding-left: 0px;">
+        <img src="images/processor.png" width="100" height="100" alt="...">
+        <h3 class="text-center" style="color: White;">Processor</h3>
+    </a>
+</div>   
+<div class="col-xs-4"></div>
+              <div class="col-xs-4">
+                  <br><br>
+                <a href="/register" class="thumbnail center big-button" style="background-color: rgba(143, 130, 130, 0.479); padding-left: 0px;">
+        <h3 class="text-center" style="color: White;">Track The Batch</h3>
+    </a>
+                 
                 </div>
+                <div class="col-xs-4"></div>
+                </div>
+
+                
             </div>
+           <br><br><br> <br><br><br><br><br><br><br><br><br><br>
             </div>          
           </div>
       </div>
-    <!-- Modal content-->
-    {{!-- <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Login as..</h4>
-      </div>
-
-      <div class="modal-body">
-        <div class="form-modal">
-            <div class="container-fluid">
-                <div class="row rowBox" >
-                <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                    <a href="/exporter" class="thumbnail center">
-                        <img src="images/exporter.png" width="100" height="100" alt="...">
-                    </a>
-                    <h5 class="text-center">Exporter</h5>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                    <a href="/importer" class="thumbnail center">
-                        <img src="images/importer.png" width="100" height="100" alt="...">
-                    </a>
-                    <h5 class="text-center">Importer</h5>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                    <a href="/processor" class="thumbnail center">
-                        <img src="images/processor.png" width="100" height="100" alt="...">
-                    </a>
-                    <h5 class="text-center">Processor</h5>
-                    </div>                
-                </div>
-            </div>
-            </div>          
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div> --}}
-
-  {{!-- </div>
-</div> --}}
-
-{{!-- <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Coffee Supply Chain</h1>
-    </div>
-</div> --}}
-
-{{!-- <div class="container-fluid">
-    <div class="row rowBox" >
-      <div class="coffeed coffeed-shadow">
-        <div class="coffeed-header" style="background-color:rgb(173, 186, 192)">
-            <legend class="text-center">Coffee Supply List</legend>
-        </div>
-        <div class="coffeed-body" >
-          <div class="table-container">
-              <table class="table" style="width:100%">
-                  <thead id="colored-table">
-                      <th>CoffeeId</th>
-                      <th>AssetType</th>
-                      <th>Color</th>
-                      <th>DOM</th>
-                      <th>Make</th>
-                      <th>Model</th>
-                      <th>Owner</th>
-                      <th>Status</th>
-                      <th> </th>
-                  </thead>
-                  <tbody>
-                      {{#each itemList}}
-                      <tr>
-                          <td>{{this.Key}}</td>
-                          <td>{{this.Record.assetType}}</td>
-                          <td>{{this.Record.color}}</td>
-                          <td>{{this.Record.dateOfManufacture}}</td>
-                          <td>{{this.Record.make}}</td>
-                          <td>{{this.Record.model}}</td>
-                          <td>{{this.Record.ownedBy}}</td>
-                          <td>{{this.Record.status}}</td>
-                          {{!-- <td><button class="btn btn-danger filled" onClick="getItemHistory('{{this.Key}}');">Get history</button></td> --}}
-                      {{!-- </tr>
-                      {{/each}}
-                  </tbody>
-              </table>
-          </div>
-        </div>    
-      </div>
-  </div>
-</div> --}} 
 </div>
 </div>
 </body>

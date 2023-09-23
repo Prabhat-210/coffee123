@@ -97,7 +97,7 @@ class OrderContract extends Contract {
             queryString
         );
 
-        let coffeeContract = new CoffeeContract();
+        let coffeeContract = new OrderContract();
         let result = await coffeeContract.getAllResults(resultsIterator.iterator);
         // NOTE: If the above line of code isn't working please uncomment the below line
         // and un comment getAllResults() function in this file
@@ -124,24 +124,24 @@ class OrderContract extends Contract {
         return JSON.stringify(result);
     }
 
-    // async getAllResults(iterator) {
-    //     let allResult = [];
+    async getAllResults(iterator) {
+        let allResult = [];
 
-    //     for (
-    //         let res = await iterator.next();
-    //         !res.done;
-    //         res = await iterator.next()
-    //     ) {
-    //         if (res.value && res.value.value.toString()) {
-    //             let jsonRes = {};
-    //             jsonRes.Key = res.value.key;
-    //             jsonRes.Record = JSON.parse(res.value.value.toString());
-    //             allResult.push(jsonRes);
-    //         }
-    //     }
-    //     await iterator.close();
-    //     return allResult;
-    // }
+        for (
+            let res = await iterator.next();
+            !res.done;
+            res = await iterator.next()
+        ) {
+            if (res.value && res.value.value.toString()) {
+                let jsonRes = {};
+                jsonRes.Key = res.value.key;
+                jsonRes.Record = JSON.parse(res.value.value.toString());
+                allResult.push(jsonRes);
+            }
+        }
+        await iterator.close();
+        return allResult;
+    }
 }
 
 module.exports = OrderContract;

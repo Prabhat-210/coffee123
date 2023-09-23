@@ -1,40 +1,28 @@
-<div class="px-3 py-2 bg-secondary text-white">
+<div class="px-3 py-2 " style="background-color: rgba(148, 187, 151, 0.5);>
     <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
+        {{!-- <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
         <svg class="bi d-block mx-coffee mb-1 " width="24" height="24"></svg>
         {{title}}          
-        </h2>
-    <a type="button" class="btn btn-danger filled" href="/" class="nav-link text-white">
-    Logout
-    </a>            
+        </h2>      --}}
+    <a type="button" class="btn btn-success filled marginLeft " href="/" class="nav-link text-white">
+   Back
+    </a>        
     </div>
     </div>
 </div> 
 <br/>
 <div class="jumbotron jumbotronDealer jumbotron-fluid">
   <div class="container">
-      <h1 class="display-4">Importer Dashboard</h1>
-     </div>
-</div>
-</br>
-<div class="container-fluid">
-    <div class="row rowBox" >
-        <div class="col-md-5 col-sm-12"></div>
-        <div class="col-md-4 col-sm-12">
-            <button type="submit" onclick="allOrders(event)" class="btn btn-fill btn-primary rounded-pill">Show All Orders</button>
-        </div>
-        <div class="col-md-3 col-sm-12">
-        </div>
-
-    </div>
-</div>        
+    <center>  <h1 class="display-4">Importer</h1>
+     </center>     
+     <br><br>
 <div class="container-fluid">
     <div class="row rowBox" >
         <div class="col-md-3 col-sm-12"></div>
         <div class="col-md-6 col-sm-12">
-            <div class="coffeed coffeed-shadow">
-                <div class="coffeed-header" style="background-color:teal">
+            <div >
+                <div class="coffeed-header" >
                     <legend class="text-center" data-bs-toggle="collapse" href="#collapseRaise" role="button" aria-expanded="false" aria-controls="collapseExample">Raise new order</legend></br>
                 </div>
                 <div class="coffeed-body collapse" id="collapseRaise">
@@ -43,41 +31,42 @@
                             <div class="col-md-12 col-sm-12" class="form-group">
                             <a>Order Number</a>
                             <label for="orderNumber" class="form-label mt-4"></label>
-                            <input type="text" class="form-control" id="orderNumber" aria-describedby="orderNumber" placeholder="A71">
+                            <input type="text" class="form-control" id="orderNumber" aria-describedby="orderNumber" >
                             </div>
                         </div>
                         <div class="row" >
                             <div class="col-md-12 col-sm-12" class="form-group">
-                            <a>Coffee Make</a>
+                            <a>Invoice ID</a>
                             <label for="coffeeMake" class="form-label mt-4"></label>
-                            <input type="text" class="form-control" id="coffeeMake" aria-describedby="coffeeMake" placeholder="Tata">
+                            <input type="text" class="form-control" id="coffeeMake" aria-describedby="coffeeMake" >
                             </div>
                         </div>
                         <div class="row" >
                             <div class="col-md-12 col-sm-12" class="form-group">
-                            <a>Coffee model</a>
+                            <a>Quantity</a>
                             <label for="coffeeModel" class="form-label mt-4"></label>
-                            <input type="text" class="form-control" id="coffeeModel" aria-describedby="coffeeModel" placeholder="Tiago">
+                            <input type="text" class="form-control" id="coffeeModel" aria-describedby="coffeeModel" >
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12" class="form-group">
-                            <a>Coffee Colour</a>
+                            <a>Price</a>
                             <label for="coffeeColour" class="form-label mt-4"></label>
-                            <input type="text" class="form-control" id="coffeeColour" aria-describedby="coffeeColour" placeholder="Black">
+                            <input type="text" class="form-control" id="coffeeColour" aria-describedby="coffeeColour" >
                             </div>
                         </div>
                       <div class="row" >
                             <div class="col-md-12 col-sm-12" class="form-group">
                             <a>Importer Name</a>
                             <label for="ImporterName" class="form-label mt-4"></label>
-                            <input type="text" class="form-control" id="ImporterName" aria-describedby="ImporterName" placeholder=" Pride Motors">
+                            <input type="text" class="form-control" id="ImporterName" aria-describedby="ImporterName">
                             </div>
                         </div>      
                         </br>
                         <div class="row" >
                             <div class="col-md-12 col-sm-12" class="form-group">
-                                <button type="submit" onclick="createOrder(event)" class="btn btn-fill btn-secondary rounded-pill">Raise Order</button>
+                                <center><button type="submit" onclick="createOrder(event)" class="btn btn-submit">Submit</button>
+                            </center>
                             </div>
                         </div>
                     </form>
@@ -87,11 +76,13 @@
         <div class="col-md-3 col-sm-12"></div>
     </div>
 </div>
+
+<br><br>
 <div class="container-fluid">
     <div class="row rowBox" >
         <div class="col-md-3 col-sm-12"></div>
         <div class="col-md-6 col-sm-12">
-            <div class="coffeed coffeed-shadow">
+            <div >
                 <div class="coffeed-header" style="background-color:teal">
                     <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryReadOrder" role="button" aria-expanded="false" aria-controls="collapseExample" >Check Order</legend>
                 </div>
@@ -101,11 +92,12 @@
                             <div class="col-md-12 col-sm-12" class="form-group">
                             <a>Order Number</a>
                             <label for="ordNum" class="form-label mt-4"></label>
-                            <input type="text" class="form-control" id="ordNum" aria-describedby="ordNum" placeholder="A71">
+                            <input type="text" class="form-control" id="ordNum" aria-describedby="ordNum">
                             </div>
                         </div>
                         </br>
-                        <button type="submit" onclick="readOrder(event)" class="btn btn-fill btn-secondary rounded-pill">Submit</button></br>
+                       <center> <button type="submit" onclick="readOrder(event)" class="btn btn-submit">Submit</button></br>
+                    </center>
                     </form>
                 </div>
             </div>
@@ -114,6 +106,10 @@
     </div>
 </div>
 
+     </div>
+</div>
+</br>
+ 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script type="text/javascript" src='/javascripts/main.js'></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

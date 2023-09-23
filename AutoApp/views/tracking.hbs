@@ -16,13 +16,54 @@
     <center><h1 class="display-4">Processor</h1></center>
   </div>
 
+<div class="container-fluid">
+    <div class="row rowBox" >
+      <div >
+        <div class="coffeed-header" style="background-color:rgb(173, 186, 192)">
+            <legend class="text-center">Complete Coffee List</legend>
+        </div>
+        <div class="coffeed-body" >
+          <div class="table-container">
+              <table class="table" style="width:100%">
+                  <thead id="colored-table">
+                      <th>CoffeeId</th>
+                      <th>AssetType</th>
+                      <th>Color</th>
+                      <th>DOM</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Owner</th>
+                      <th>Status</th>
+                      <th> </th>
+                  </thead>
+                  <tbody>
+                      {{#each itemList}}
+                      <tr>
+                          <td>{{this.Key}}</td>
+                          <td>{{this.Record.assetType}}</td>
+                          <td>{{this.Record.color}}</td>
+                          <td>{{this.Record.dateOfManufacture}}</td>
+                          <td>{{this.Record.make}}</td>
+                          <td>{{this.Record.model}}</td>
+                          <td>{{this.Record.ownedBy}}</td>
+                          <td>{{this.Record.status}}</td>
+                          <td><button class="btn btn-danger filled" onClick="getItemHistory('{{this.Key}}');">Track Batch</button></td>
+                      </tr>
+                      {{/each}}
+                  </tbody>
+              </table>
+          </div>
+        </div>    
+      </div>
+  </div>
+</div>
 </br>
 <div class="container-fluid">
     <div class="row rowBox" >
         <div class="col-md-12 col-sm-12">
         <div >
         <div class="coffeed-header" style="background-color:wheat">
-            <legend class="text-center">Processed</legend></br>
+            <legend class="text-center">Already Registered</legend></br>
         </div>
         <div class="coffeed-body"></div>  
         <div class="row rowBox" > 
@@ -33,13 +74,13 @@
                     {{!-- <th>Coffee Id</th> --}}
                     <th>CoffeeId</th>
                     {{!-- <th>Next Station</th> --}}
-                    <th>Invoice ID</th>
+                    <th>Color</th>
                     <th>DOM</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
+                    <th>Make</th>
+                    <th>Model</th>
                     <th>Owner</th>
                     <th>Status</th>
-                    
+                    <th> </th>
                 </thead>
                 <tbody>
                     {{#each itemList}}
@@ -52,7 +93,9 @@
                         <td>{{this.Record.model}}</td>
                         <td>{{this.Record.ownedBy}}</td>
                         <td>{{this.Record.status}}</td>
-                        
+                        <td>
+                            <button type="button" class="btn btn-danger filled" data-toggle="modal" data-target="#registerModal" data-id={{this.Key}}>Re-Register</button></td>
+                        </td>
                     </tr>
                     {{/checkRegistered}}
                     {{/each}}
@@ -71,17 +114,17 @@
         <div class="col-md-12 col-sm-12">
         <div >
         <div class="coffeed-header" style="background-color:wheat">
-            <legend class="text-center">Pending For Processing</legend></br>
+            <legend class="text-center">Pending For Registration</legend></br>
         </div>            
         <div class="table-container">
             <table class="table" style="width:100%">
                 <thead id="colored-table">
                     <th>CoffeeId</th>
                     <th>AssetType</th>
-                    <th>Invoice ID</th>
+                    <th>Color</th>
                     <th>DOM</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
+                    <th>Make</th>
+                    <th>Model</th>
                     <th>Owner</th>
                     <th>Status</th>
                     <th> </th>
@@ -99,7 +142,7 @@
                         <td>{{this.Record.ownedBy}}</td>
                         <td>{{this.Record.status}}</td>
                         <td>
-                            <button type="button" class="btn btn-danger filled" data-toggle="modal" data-target="#registerModal" data-id={{this.Key}}>Process</button>
+                            <button type="button" class="btn btn-danger filled" data-toggle="modal" data-target="#registerModal" data-id={{this.Key}}>Register</button>
                         </td>
                     </tr>
                     {{/ifbothequals}}
@@ -118,7 +161,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Process Coffee</h4>
+        <h4 class="modal-title">Register Coffee</h4>
       </div>
       <div class="modal-body">
                 <div class="form-modal">

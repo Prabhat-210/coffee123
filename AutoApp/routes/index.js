@@ -98,14 +98,32 @@ router.get('/processor', function(req, res, next) {
 })});
 
 
-
-router.get('/addCoffeeEvent', async function(req, res, next) {
+router.get('/register', function(req, res, next) {
   let processorClient = new clientApplication();
-  const result = await processorClient.contractEventListner("exporter", "Admin", "coffeechannel", 
-  "Coffee-Supply", "addCoffeeEvent")
-  console.log("The result is ####$$$$",result)
-  res.render('exporter', {view: "coffeeEvents", results: result })
-})
+  processorClient.generatedAndEvaluateTxn(
+    "processor",
+    "Admin",
+    "coffeechannel", 
+    "Coffee-Supply",
+    "CoffeeContract",
+    "queryAllCoffees"
+  )
+  .then(coffees => {
+    const dataBuffer = coffees.toString();
+    console.log("coffees are ", coffees.toString())
+    const value = JSON.parse(dataBuffer)
+    console.log("History DataBuffer is",value)
+    res.render('register', { title: 'Processor', itemList: value});
+  }).catch(err => {
+    res.render("error", {
+      message: `Some error occured`,
+      callingScreen: "error",
+    })
+})});
+
+
+
+
 
 router.post('/manuwrite',function(req,res){
 
@@ -282,12 +300,12 @@ router.post('/createOrder',async function(req,res){
   let processorClient = new clientApplication();
   
   processorClient.generatedAndEvaluateTxn( 
-    "exporter",
+    "importer",
     "Admin",
     "coffeechannel", 
     "Coffee-Supply",
-    "CoffeeContract",
-    "checkMatchingOrders", coffeeId).then(message => {
+    "OrderContract",
+    "queryAllOrders","").then(message => {
     console.log("Message response",message)
     var dataBuffer = message.toString();
     var data =[];
@@ -295,19 +313,21 @@ router.post('/createOrder',async function(req,res){
     console.log("checkMatchingOrders",data)
     const value = JSON.parse(dataBuffer)
     let array = [];
-    if(value.length) {
-        for (i = 0; i < value.length; i++) {
-            array.push({
-               "orderId": `${value[i].Key}`,"coffeeId":`${coffeeId}`,
-                "Make": `${value[i].Record.make}`, "Model":`${value[i].Record.model}`, 
-                "Color":`${value[i].Record.color}`, 
-                "ImporterName": `${value[i].Record.ImporterName}`,"assetType": `${value[i].Record.assetType}`
-            })
-        }
-    }
-    console.log("Array value is ", array)
-    console.log("Coffee id sent",coffeeId)
-    res.render('matchOrder', { itemList: array , title: "Matching Orders"})
+    array.push(value)
+    array.forEach(x=>{
+      processorClient.generatedAndEvaluateTxn( 
+        "importer",
+        "Admin",
+        "coffeechannel", 
+        "Coffee-Supply",
+        "OrderContract",
+        "queryAllOrders","").then(message => {
+        console.log("Message response",message)
+        var dataBuffer = message.toString();
+      
+      }) 
+    })
+     res.render('matchOrder', { itemList: array , title: "Matching Orders"})
 
   });
 

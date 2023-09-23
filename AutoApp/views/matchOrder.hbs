@@ -1,20 +1,17 @@
 <head>
-    <div class="px-3 py-2 bg-secondary text-white">
-        <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
-            <svg class="bi d-block mx-coffee mb-1 " width="24" height="24"></svg>
-            {{title}}          
-            </h2>
-        <a type="button" href="/exporter" class="btn btn-danger nav-link text-white filled">
-        Back to Exporter Dashboard
-        </a>
-        <a type="button" href="/" class="btn btn-danger filled marginLeft" class="nav-link text-white">
-        Logout
-        </a>                    
-        </div>
-        </div>
+    <div class="px-3 py-2 " style="background-color: rgba(148, 187, 151, 0.5);>
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        {{!-- <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
+        <svg class="bi d-block mx-coffee mb-1 " width="24" height="24"></svg>
+        {{title}}          
+        </h2>      --}}
+    <a type="button" class="btn btn-success filled marginLeft " href="/" class="nav-link text-white">
+   Back
+    </a>        
     </div>
+    </div>
+
 </head>
  
 </br>
@@ -36,14 +33,14 @@
                     <tbody>
                         {{#each itemList}}
                         <tr>
-                            <td>{{this.orderId}}</td>
-                            <td>{{this.coffeeId}}</td>
-                            <td>{{this.Make}}</td>
-                            <td>{{this.Model}}</td>
-                            <td>{{this.Color}}</td>
-                            <td>{{this.ImporterName}}</td>
-                            <td>{{this.assetType}}</td>
-                            <td><button class="btn btn-info filled" onClick="matchOrder('{{this.orderId}}','{{this.coffeeId}}');">Match Order</button></td>
+                            <td>{{this.value.orderId}}</td>
+                            <td>{{this.value.coffeeId}}</td>
+                            <td>{{this.value.Make}}</td>
+                            <td>{{this.value.Model}}</td>
+                            <td>{{this.value.Color}}</td>
+                            <td>{{this.value.ImporterName}}</td>
+                            <td>{{this.value.assetType}}</td>
+                            <td><button class="btn btn-info filled" onClick="matchOrder('{{this.value.orderId}}','{{this.value.coffeeId}}');">Match Order</button></td>
 
                         </tr>
                         {{/each}}

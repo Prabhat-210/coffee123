@@ -9,8 +9,10 @@ a {
 .marginLeft{
 margin-left: 10px;
 }
-.rowBox {
-  padding: 3px;
+.rowBox1 {
+  padding: 20px;
+  padding-left: 200px;
+  padding-top: 50px;
 }
 .b-example-divider {
   height: 3rem;
@@ -23,19 +25,25 @@ margin-left: 10px;
   border-top: 8px solid #bbb;
   border-radius: 5px;
 } */
-.jumbotronManufacturer {
-  /* background: linear-gradient(white, tomato); */
-  background-image:url(pexels-andrew-neel-4264047.jpg);
+.jumbotronIndex {
+  background-color: rgba(107, 96, 96, 0.609); /* Adjust the alpha (fourth value) to control transparency */
+  background-image: url(34.jpg);
+  background-size: 100% 100%;
   background-size: cover;
+  padding-bottom: 200;
 }
 
 .jumbotronDealer {
-  background: linear-gradient(white, teal);
+  background-image:url(123.jpg);
   background-size: cover;
 }
 
 .jumbotronMvd {
-  background: linear-gradient(white, wheat);
+  background-image:url(123.jpg);
+  background-size: cover;
+}
+.jumbotronManufacturer{
+  background-image:url(123.jpg);
   background-size: cover;
 }
 .rcorners {
@@ -83,3 +91,35 @@ margin-left: 10px;
 .dropdown-toggle {
   outline: 0;
 }
+
+
+
+
+    /* Add custom CSS for styling */
+    body {
+        background-color: #f8f9fa;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+    }
+    .btn-submit {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .big-button {
+      display: inline-block;
+      padding: 10px 20px; /* Adjust the padding to make the button bigger or smaller */
+      background-color: aqua;
+      text-decoration: none;
+      color: black; /* You can change the text color to your preference */
+      font-size: 20px; /* Adjust the font size to make the text bigger or smaller */
+      border: none;
+      cursor: pointer;
+    }

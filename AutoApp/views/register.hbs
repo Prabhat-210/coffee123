@@ -1,0 +1,64 @@
+<div class="px-3 py-2 " style="background-color: rgba(148, 187, 151, 0.5);>
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        {{!-- <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-coffee text-white text-decoration-none">
+        <svg class="bi d-block mx-coffee mb-1 " width="24" height="24"></svg>
+        {{title}}          
+        </h2>      --}}
+    <a type="button" class="btn btn-success filled marginLeft " href="/" class="nav-link text-white">
+   Back
+    </a>        
+    </div>
+    </div>
+
+<div class="jumbotron jumbotronMvd jumbotron-fluid">
+  <div class="container">
+    <center><h1 class="display-4">Processor</h1></center>
+  </div>
+
+<div class="container-fluid">
+    <div class="row rowBox" >
+      <div >
+        <div class="coffeed-header" style="background-color:rgb(173, 186, 192)">
+            <legend class="text-center">Complete Coffee List</legend>
+        </div>
+        <div class="coffeed-body" >
+          <div class="table-container">
+              <table class="table" style="width:100%">
+                  <thead id="colored-table">
+                      <th>CoffeeId</th>
+                      <th>AssetType</th>
+                      <th>Color</th>
+                      <th>DOM</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Owner</th>
+                      <th>Status</th>
+                      <th> </th>
+                  </thead>
+                  <tbody>
+                      {{#each itemList}}
+                      <tr>
+                          <td>{{this.Key}}</td>
+                          <td>{{this.Record.assetType}}</td>
+                          <td>{{this.Record.color}}</td>
+                          <td>{{this.Record.dateOfManufacture}}</td>
+                          <td>{{this.Record.make}}</td>
+                          <td>{{this.Record.model}}</td>
+                          <td>{{this.Record.ownedBy}}</td>
+                          <td>{{this.Record.status}}</td>
+                          <td><button class="btn btn-danger filled" onClick="getItemHistory('{{this.Key}}');">Get history</button></td>
+                      </tr>
+                      {{/each}}
+                  </tbody>
+              </table>
+          </div>
+        </div>    
+      </div>
+  </div>
+</div>
+</br>
+<script type="text/javascript" src='/javascripts/main.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
