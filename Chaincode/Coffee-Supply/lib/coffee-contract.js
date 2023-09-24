@@ -33,7 +33,7 @@ class CoffeeContract extends Contract {
                 model,
                 color,
                 dateOfManufacture,
-                status: 'In Factory',
+                status: 'Ready to export',
                 ownedBy: manufactureName,
                 assetType: 'coffee',
             };
@@ -130,7 +130,7 @@ class CoffeeContract extends Contract {
             const coffeeBuffer = await ctx.stub.getState(coffeeId);
             const coffeeDetails = JSON.parse(coffeeBuffer.toString());
 
-            coffeeDetails.status = `Registered to ${ownerName} wih plate number ${registrationNumber}`;
+            coffeeDetails.status = `The batch is being transferred from ${ownerName} to ${registrationNumber}`;
             coffeeDetails.ownedBy = ownerName;
 
             const newCoffeeBuffer = Buffer.from(JSON.stringify(coffeeDetails));
